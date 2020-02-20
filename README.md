@@ -9,6 +9,8 @@ Cloning Youtube with Vanilla and NodeJS
 
    Get Route function: get([URL], [Controller])
 
+3. **DOTENV** is used to hide strings that I don't want to show.
+
 ## Pages:
 
 - [ ] Home
