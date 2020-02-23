@@ -65,9 +65,9 @@ export const postEditVideo = async (req, res) => {
     params: { id },
     body: { title, description }
   } = req;
-  await Video.findOneAndUpdate({ _id: id }, { title, description });
-  res.redirect(routes.videoDetail(id));
   try {
+    await Video.findOneAndUpdate({ _id: id }, { title, description });
+    res.redirect(routes.videoDetail(id));
   } catch (error) {
     res.redirect(routes.home);
   }
