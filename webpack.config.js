@@ -14,6 +14,14 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(js)$/,
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ]
+      },
+      {
         test: /\.(scss)$/, // 확장자 식별, scss 찾기. 만약 이걸 찾으면 아래 코드를 사용(use)
         use: ExtractCSS.extract([
           // This 'use' runs from bottom to top.
