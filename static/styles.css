@@ -152,6 +152,31 @@ main {
   margin: 0 auto;
   min-height: 70vh; }
 
+button,
+input {
+  padding: 7px 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #444444;
+  font-weight: 600; }
+  button::-webkit-input-placeholder, input::-webkit-input-placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+  button::-moz-placeholder, input::-moz-placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+  button:-ms-input-placeholder, input:-ms-input-placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+  button::-ms-input-placeholder, input::-ms-input-placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+  button::placeholder,
+  input::placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+
 .header {
   background-color: #ea232c;
   margin-bottom: 50px; }
@@ -165,7 +190,7 @@ main {
     align-items: center; }
     .header .header__wrapper .header__column i {
       color: white;
-      font-size: 40px; }
+      font-size: 30px; }
     .header .header__wrapper .header__column:nth-child(2) {
       width: 100%;
       justify-self: center; }
