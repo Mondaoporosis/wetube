@@ -43,7 +43,7 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
   const {
     _json: { id, avatar_url: avatarUrl, name, email }
   } = profile;
-  console.log(_, __, profile, cb);
+  // console.log(_, __, profile, cb);
   try {
     const user = await User.findOne({ email });
     if (user) {
@@ -103,6 +103,7 @@ export const logout = (req, res) => {
 };
 
 export const getMe = (req, res) => {
+  console.log(req.user);
   res.render("userDetail", { pageTitle: "User Detail", user: req.user });
 };
 
@@ -112,6 +113,7 @@ export const userDetail = async (req, res) => {
   } = req;
   try {
     const user = await User.findById(id);
+    console.log(user.name);
     res.render("userDetail", { pageTitle: "User Detail", user });
   } catch (error) {
     res.redirect(routes.home);
